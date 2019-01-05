@@ -1,0 +1,10 @@
+use jadrn045;
+
+drop table if exists prodOrder;
+
+create table prodOrder
+(
+sku varchar(50),
+quantity varchar(10),
+orderDate varchar(10)
+);

@@ -1,0 +1,182 @@
+/* Code developed by Patil, Neha
+Project #4
+Fall 2017
+Username : jadrn045, 
+RED ID : 821545485 */
+*
+{
+	margin : 0;
+	padding: 0;
+}
+html
+{
+	height: 100%;
+	width: 100%;
+}
+body 
+{
+	font-size: 100%;
+	width: 100%;
+	min-width: 768px;
+	color: Sienna;
+	font-family: Arial,Helvetica,sans-serif;
+	background-image: url('bi1.png');
+	background-size:cover;                   
+     background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+	height: 100%;
+	}
+
+}
+#header
+{
+font-size: 50px;
+margin-left:10px;
+}
+#contact
+{
+font-size: 25px;
+margin-left:65px;
+margin-right:50px;
+}
+#desc
+{
+font-size: 20px;
+margin-left:80px;
+margin-right:80px;
+text-align:center;
+}
+.navbar{	
+font-size: 20px;
+}
+
+#title
+{
+font-size: 25px;
+text-align:center;
+
+}
+
+.some{text-decoration: underline;}
+#contact{text-align:center;}
+
+
+li a:link, li a:visited, li a:active {
+color: Sienna !important;
+}
+
+.navbar-brand{
+color: Sienna !important;
+margin-left:200px !important;
+}
+.active
+{
+background-color:Sienna !important; 
+color: white !important;
+}
+.navbar-inverse
+{
+
+background-color: rgba(160,82,45,0);
+}
+
+table.order,table.customerorder
+{
+margin-left:40px;
+ 	border-spacing: 10px;
+	border-collapse: collapse;
+	
+}
+
+table#report
+{
+margin-left:auto;
+margin-right:auto;
+ 	border-spacing: 10px;
+	border-collapse: collapse;
+	width:1000px;
+	
+}
+.order td,.order th,#report td,#report th
+{
+	border: 2px solid Sienna; 
+	padding:10px;
+	font-size: 20px;
+	text-align: center;
+}
+.grand {font-weight:bold;}
+.ui-widget,#dialog-modal
+{
+background-color:white;
+font-size:10px;
+border: 1px solid Sienna; 
+}
+#error,.error,#dberror
+{
+color:red;
+font-size:15px;
+text-align: center;
+}
+
+.prodname{
+color: blue;
+text-decoration: underline;
+  cursor: pointer;
+  font-weight:bold;
+}
+.addtocart{margin-right:20px;}
+#content{font-size: 15px;}
+.required:after {
+  content:"*";
+  color:red;
+}
+.col-md-4,h1,h3,.center{text-align:center;}
+
+input[type="button"] ,#resetb
+{ 
+background-color:Sienna; 
+color: white;
+}
+.row{margin-left:20px;
+margin-right:0px;}
+
+.border
+{
+border: 1px solid Sienna;
+}
+hr{
+color:Sienna;
+background-color:Sienna;
+}
+
+h2{
+float:left;
+margin-left:80px !important;
+}
+
+#order
+{
+margin-right:100px;
+}
+.customerorder{
+margin-left:30px;
+margin-right:30px;
+}
+.customerorder td{padding:3px 3px 3px 3px;}
+.modalbuttons,#error
+{
+text-align:center;
+}
+
+.ui-button{float:right;}
+#ui-id-1{font-size:10px;}
+
+.confirmmsg{
+text-align:center;
+font-size:20px;}
+
+input[type="button"][name='quantity'],.error
+{
+height:30px;
+}

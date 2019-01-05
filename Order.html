@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<!-- Code developed by Patil, Neha
+Project #4
+Fall 2017
+Username : jadrn045, 
+RED ID : 821545485 -->
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+    <title>Order Chocolates</title>
+	<link rel="stylesheet" href="MyCSS.css"/>
+	<script type="text/javascript" src="shopping_cart.js"></script>	
+	<script src="order.js"></script>
+	
+	
+</head>
+<body>
+ 
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Bertha's Deluxe Chocolates</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="Products.html">Products</a></li>
+      <li class="active"><a href="Order.html">Order</a></li>
+      <li><a href="Aboutus.html">About Us</a></li>
+      <li><a href="Contactus.html">Contact</a></li>
+	  </ul>
+	  <div class="cart">
+
+<img id="cart" src="cart.png" width="60px" height="auto" /><span id="count"></span>
+</div>
+  </div>
+</nav>
+
+<br><br>
+<div id="dberror"></div>
+
+<div id="customerinfo"></div>
+
+<div id="cartproducts"></div>
+
+ <div class="ui-widget">
+<div id="dialog-modal" class="widget-dialog-container" title="Complete Your Order">
+    <br>
+    <table class="customerorder">
+       <tr><th>Billing Address</th><th></th><th>Shipping Address</th><th></th></tr>
+	   <tr><td></td><td></td><td></td><td></td></tr>
+	   <tr>
+	   <td><label for="Fname" class="required">First Name</label></td>
+	   <td><input type="text" name="Fname" size="15" id="Fname" autofocus /></td>
+	   <td><label for="SFname" class="required">First Name</label></td>
+	   <td><input type="text" name="SFname" size="15" id="SFname"/></td>
+	   </tr>
+	   
+	    <tr>
+	   <td><label for="Lname" class="required">Last Name</label></td>
+	   <td><input type="text" name="Lname" size="15" id="Lname"  /></td>
+	   <td><label for="SLname" class="required">Last Name</label></td>
+	   <td><input type="text" name="SLname" size="15" id="SLname"  /></td>
+	   </tr>
+	   
+	   <tr>
+	   <td><label class="required">Address</label></td>
+		<td><input type="text" name="address1" size="30" id="address1"/></td>
+		<td><label class="required">Address</label></td>
+		<td><input type="text" name="Saddress1" size="30" id="Saddress1"/></td>
+		</tr>
+		
+		<tr>
+	   <td></td>
+		<td><input type="text" name="address2" size="30" id="address2" /></td>
+	   <td></td>
+		<td><input type="text" name="Saddress2" size="30" id="Saddress2" /></td>
+		</tr>
+		
+<tr>
+	   <td><label for="city" class="required">City</label></td>
+	    <td><input type="text" name="city" size="20" id="city"/></td>
+		 <td><label for="Scity" class="required">City</label></td>
+		  <td><input type="text" name="Scity" size="20" id="Scity"/></td>
+ </tr>
+ 
+ <tr>
+	   <td><label for="state" class="required">State</label> <input type="text" name="state" size="4" maxlength="2" id="state" value="CA"/></td>
+	   <td><label for="zip" class="required">Zipcode</label> <input type="text" name="zip" size="10" maxlength="5" id="zip" placeholder=" #####" /></td>
+	   <td><label for="Sstate" class="required">State</label> <input type="text" name="Sstate" size="4" maxlength="2" id="Sstate" value="CA"/></td>
+	   <td><label for="Szip" class="required">Zipcode</label> <input type="text" name="Szip" size="10" maxlength="5" id="Szip" placeholder=" #####" /></td>
+</tr>
+
+<tr>
+	   <td><label class="input required" for="contactno">Phone Number</label></td>
+	   <td><input type="text" name="contactno" id="contactno" size="15" maxlength="12"  placeholder=" ##########"/></td>
+	   <td><label class="input required" for="Scontactno">Phone Number</label></td>
+	   <td><input type="text" name="Scontactno" id="Scontactno" size="15" maxlength="12"  placeholder=" ##########"/></td>
+</tr>   
+<tr>
+	   <td></td>
+	   <td></td>
+	   <td> <input type="checkbox" name="shipadd">   Use same as Billing address</td>
+	   <td></td>
+	   
+</tr>
+</table> 
+
+   <br>
+   <div class="modalbuttons"> 
+   <label for="cardtype" class="required" >Card Type</label>
+	<select name="cardtype" id="cardtype">
+	<option value="">Select Card</option>
+	<option value="Visa">Visa</option>
+	<option value="Mastercard">Mastercard</option>
+	<option value="Discover">Discover</option>
+	<option value="American Express">American Express</option>
+</select>
+
+<label class="input required" for="cardno">Card Number</label>
+<input type="text" name="cardno" id="cardno" size="18" maxlength="16"  placeholder=" ################"/>
+
+<label class="input required" for="expdate">Expiration Date</label>
+<input type="text" name="expdate" id="expdate" size="10" maxlength="7"  placeholder="MM/YYYY"/></div>
+<br><br><br>
+           
+		   
+		   <div class="modalbuttons"> 
+		  
+            <input type="button" class='btn btn-primary btn-xs' id='submitorder'  value="Submit Order"/>
+			</div>
+     <div id="error"></div>
+	 
+
+		
+     
+</div>
+
+</div>
+</body>
+
+</html>  
